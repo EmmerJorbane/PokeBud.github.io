@@ -1,2 +1,7 @@
 # PokeBud
-This is program that stores information on the pokemon you physically have and inputs them in a library. That library has the ability to grade your cards and build personalized decks for you to use. And instead of inputting them all one by one, theres a scanner that can scan them in batches for you and upload them that way.
+
+## PokeBud (working title) – A technical exploration of OCR and TCG data analysis
+
+This website is a non-commercial, personal portfolio project. Pokémon and Pokémon character names are trademarks of Nintendo. Other trademarks are the property of their respective owners. This project is not affiliated with, endorsed, or sponsored by The Pokémon Company or Nintendo.
+
+

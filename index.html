@@ -1,1 +1,391 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>POKEBUD — Collect & Showcase Pokémon</title>
+        <meta
+            name="description"
+            content="POKEBUD — a modern, dark landing page inspired by Collectr. Build and showcase your Pokémon collection."
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body class="theme-dark">
+        <!-- Top navigation -->
+        <header class="site-header" role="banner">
+            <div class="container header-inner">
+                <a class="brand" href="/" aria-label="POKEBUD home">
+                    <img
+                        src="images/NewLogo.png"
+                        alt="POKEBUD logo"
+                        class="brand-mark"
+                    />
+                    <span class="brand-name">POKÉBUD</span>
+                </a>
 
+                <nav
+                    class="main-nav"
+                    role="navigation"
+                    aria-label="Main navigation"
+                >
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="actions">
+                    <button id="loginBtn" class="btn btn-ghost" type="button">
+                        Login
+                    </button>
+                    <button
+                        id="signupBtn"
+                        class="btn btn-primary"
+                        type="button"
+                    >
+                        Sign Up
+                    </button>
+                    <button
+                        class="mobile-toggle"
+                        id="mobileToggle"
+                        aria-expanded="false"
+                        aria-controls="mobileMenu"
+                        aria-label="Open menu"
+                    >
+                        ☰
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu (hidden on larger screens) -->
+            <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
+                <ul class="mobile-list">
+                    <li><a class="mobile-link" href="#home">Home</a></li>
+                    <li>
+                        <a class="mobile-link" href="#features">Features</a>
+                    </li>
+                    <li><a class="mobile-link" href="#about">About Us</a></li>
+                    <li>
+                        <a class="mobile-link" href="#" id="mobileLogin"
+                            >Login</a
+                        >
+                    </li>
+                    <li>
+                        <a class="mobile-link" href="#" id="mobileSignUp"
+                            >Sign Up</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Main content - Collectr-style landing -->
+        <main id="home" class="site-main" role="main">
+            <!-- Hero -->
+            <section class="hero">
+                <div class="container hero-inner">
+                    <div class="hero-left">
+                        <h1 class="hero-title">
+                            Finally, a place for all your cards
+                        </h1>
+                        <p class="hero-sub">
+                            POKÉBUD is a modern, bulk card friendly place to
+                            build your personal Pokédex. Scan cards, get deck
+                            build suggestions, and show off your cards —
+                            whatever you want to do, POKÉBUD is the solution!
+                        </p>
+
+                        <div class="hero-ctas">
+                            <a href="#signup" class="btn btn-cta"
+                                >Get Started</a
+                            >
+                            <a href="#features" class="btn btn-ghost"
+                                >Learn More</a
+                            >
+                        </div>
+
+                        <div class="hero-trust">
+                            <span class="pill">Portfolios'</span>
+                            <span class="dot">•</span>
+                            <span class="pill">Bulk Cards Scanner</span>
+                            <span class="dot">•</span>
+                            <span class="pill">Deck Builder</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-right" aria-hidden="true">
+                        <div class="mockup">
+                            <div class="mockup-body">
+                                <div class="card-art" aria-hidden="true">
+                                    <img
+                                        src="images/Untitled-1.png"
+                                        height="600"
+                                    />
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section id="features" class="features">
+                <div class="container">
+                    <h2 class="section-title">What you can do</h2>
+                    <div class="features-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">Build your roster</h3>
+                            <p class="feature-desc">
+                                Create collections for favorite Pokémon, add
+                                notes, and organize them with custom tags.
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <h3 class="feature-title">Beautiful profiles</h3>
+                            <p class="feature-desc">
+                                Showcase your top catches with customizable
+                                cards, themes, and sharing controls.
+                            </p>
+                        </article>
+
+                        <article class="feature-card">
+                            <h3 class="feature-title">Privacy-first</h3>
+                            <p class="feature-desc">
+                                Collections are private by default. You control
+                                sharing and visibility at any time.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="about">
+                <div class="container">
+                    <h2 class="section-title">About POKEBUD</h2>
+                    <p class="about-text muted">
+                        POKEBUD was created for Pokémon collectors who want a
+                        clean, modern place to track and display their finds.
+                        This is an early landing; sign up to be notified about
+                        private beta and new features.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+            <div class="container footer-inner">
+                <div class="footer-left">
+                    <span class="brand-mini">POKEBUD</span>
+                    <small class="muted"
+                        >© <span id="year"></span> POKEBUD</small
+                    >
+                </div>
+                <nav class="footer-nav" aria-label="Footer links">
+                    <a class="muted footer-link" href="#privacy">Privacy</a>
+                    <a class="muted footer-link" href="#terms">Terms</a>
+                </nav>
+            </div>
+        </footer>
+
+        <!-- Auth modal (kept hidden until opened) -->
+        <div
+            id="modal"
+            class="auth-modal"
+            aria-hidden="true"
+            style="display: none"
+        >
+            <div
+                class="modal-panel"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modalTitle"
+            >
+                <button
+                    id="closeModal"
+                    class="modal-close"
+                    aria-label="Close"
+                    type="button"
+                >
+                    ✕
+                </button>
+                <h3 id="modalTitle">Sign Up</h3>
+                <form id="authForm" class="auth-form" autocomplete="on">
+                    <label for="email"
+                        >Email
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            inputmode="email"
+                            required
+                        />
+                    </label>
+
+                    <label for="password"
+                        >Password
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            required
+                            minlength="6"
+                        />
+                    </label>
+
+                    <div class="modal-actions">
+                        <button
+                            type="button"
+                            id="cancelAuth"
+                            class="btn btn-ghost"
+                        >
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Continue
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Small, self-contained script to wire modal, mobile menu, and footer year -->
+        <script>
+            (function () {
+                // Footer year
+                var yearEl = document.getElementById("year");
+                if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+                // Mobile menu toggle
+                var mobileToggle = document.getElementById("mobileToggle");
+                var mobileMenu = document.getElementById("mobileMenu");
+                if (mobileToggle && mobileMenu) {
+                    mobileToggle.addEventListener("click", function () {
+                        var isOpen =
+                            mobileMenu.getAttribute("aria-hidden") === "false";
+                        mobileMenu.setAttribute(
+                            "aria-hidden",
+                            isOpen ? "true" : "false",
+                        );
+                        mobileToggle.setAttribute(
+                            "aria-expanded",
+                            String(!isOpen),
+                        );
+                    });
+                }
+
+                // Modal controls
+                var modal = document.getElementById("modal");
+                var loginBtn = document.getElementById("loginBtn");
+                var signupBtn = document.getElementById("signupBtn");
+                var mobileLogin = document.getElementById("mobileLogin");
+                var mobileSignUp = document.getElementById("mobileSignUp");
+                var closeModalBtn = document.getElementById("closeModal");
+                var cancelAuth = document.getElementById("cancelAuth");
+                var authForm = document.getElementById("authForm");
+
+                function openModal(mode) {
+                    if (!modal) return;
+                    var title = document.getElementById("modalTitle");
+                    if (title)
+                        title.textContent =
+                            mode === "login" ? "Login" : "Sign Up";
+                    modal.setAttribute("aria-hidden", "false");
+                    modal.style.display = "flex";
+                    // set initial focus
+                    setTimeout(function () {
+                        var first = modal.querySelector(
+                            'input:not([type="hidden"])',
+                        );
+                        if (first) first.focus();
+                    }, 60);
+                }
+                function closeModal() {
+                    if (!modal) return;
+                    modal.setAttribute("aria-hidden", "true");
+                    modal.style.display = "none";
+                }
+
+                [loginBtn, signupBtn].forEach(function (btn) {
+                    if (!btn) return;
+                    btn.addEventListener("click", function () {
+                        openModal(btn.id === "signupBtn" ? "signup" : "login");
+                    });
+                });
+
+                if (mobileLogin)
+                    mobileLogin.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        openModal("login");
+                    });
+                if (mobileSignUp)
+                    mobileSignUp.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        openModal("signup");
+                    });
+
+                if (closeModalBtn)
+                    closeModalBtn.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        closeModal();
+                    });
+                if (cancelAuth)
+                    cancelAuth.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        closeModal();
+                    });
+
+                // Close modal on overlay click
+                if (modal) {
+                    modal.addEventListener("click", function (e) {
+                        if (e.target === modal) closeModal();
+                    });
+                }
+
+                // Close on ESC
+                document.addEventListener("keydown", function (e) {
+                    if (e.key === "Escape") closeModal();
+                });
+
+                // Basic form submission stub (replace with real auth)
+                if (authForm) {
+                    authForm.addEventListener("submit", function (e) {
+                        e.preventDefault();
+                        var data = new FormData(authForm);
+                        var payload = Object.fromEntries(data.entries());
+                        // For now, just log and close modal. Replace this with real auth flow later.
+                        console.log("Auth submit (demo):", payload);
+                        // Provide quick UI feedback
+                        var submitBtn = authForm.querySelector(
+                            'button[type="submit"]',
+                        );
+                        if (submitBtn) {
+                            submitBtn.disabled = true;
+                            var original = submitBtn.textContent;
+                            submitBtn.textContent = "Working...";
+                            setTimeout(function () {
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = original;
+                                closeModal();
+                                // lightweight toast (if desired)
+                                alert(
+                                    "Submitted (demo) — no network call has been made.",
+                                );
+                            }, 700);
+                        } else {
+                            closeModal();
+                        }
+                    });
+                }
+            })();
+        </script>
+    </body>
+</html>
